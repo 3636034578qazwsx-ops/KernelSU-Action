@@ -7,10 +7,6 @@ env:
   clang_version: r365631c
   defconfig: |
     dipper_defconfig
-  kernel_patch: |
-    support-umount-modules-kernel.patch
-  kernelsu_patch: |
-    support-umount-modules-kernelsu.patch
 
 on:
   schedule:
