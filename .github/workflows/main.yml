@@ -6,7 +6,7 @@ env:
   device: dipper
   clang_version: r365631c
   defconfig: |
-    dipper_defconfig
+    dipper_user_defconfig
 
 on:
   schedule:
