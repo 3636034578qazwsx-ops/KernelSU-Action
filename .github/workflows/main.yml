@@ -38,7 +38,7 @@ jobs:
     name: Build kernel
     needs: check_kernelsu_update
     if: inputs.allow_rebuild || needs.check_kernelsu_update.outputs.local_version != needs.check_kernelsu_update.outputs.remote_version
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     permissions:
       contents: write
     steps:
@@ -63,7 +63,8 @@ jobs:
           sudo apt update
           sudo apt install -y \
               binutils-arm-linux-gnueabi \
-              binutils-aarch64-linux-gnu
+              binutils-aarch64-linux-gnu \
+              gcc-aarch64-linux-gnu
 
       - name: Checkout kernel source
         uses: actions/checkout@v4
